@@ -18,9 +18,7 @@ $(".btn").click(function(){
 
 function animateClick(color)
 {
-    setTimeout(function(){
-        $("."+color).removeClass("pressed")
-    },100)
+    setTimeout(()=>$("."+color).removeClass("pressed"),100)
     $("."+color).addClass("pressed")
 }
 
