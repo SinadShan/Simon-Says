@@ -6,6 +6,12 @@ var started = false
 gamePattern = new Array()
 userPattern = new Array()
 
+$(document).on("touchend",function(){
+    if(!started){
+        nextSequence()
+        started = true
+    }
+})
 
 $(document).keypress(function(){
     if(!started){
