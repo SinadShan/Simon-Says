@@ -55,6 +55,7 @@ function checkPattern()
         $("body").addClass("game-over")
         setTimeout(()=>$("body").removeClass("game-over"),200)
         level = 0
+        started = false
         userPattern = []
         gamePattern = []
     }
