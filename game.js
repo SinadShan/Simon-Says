@@ -6,16 +6,19 @@ var started = false
 gamePattern = new Array()
 userPattern = new Array()
 
-$(document).on("touchend",function(){
-    if(!started){
-        nextSequence()
-        started = true
+$(document).on("touchend",function(event){
+    if(!$(event.target).hasClass('btn'))
+    {
+        if(!started){
+            setTimeout(()=>nextSequence(),200)
+            started = true
+        }
     }
 })
 
 $(document).keypress(function(){
     if(!started){
-        nextSequence()
+        setTimeout(()=>nextSequence(),200)
         started = true
     }
 })
