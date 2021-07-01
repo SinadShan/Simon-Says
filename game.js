@@ -18,11 +18,14 @@ $(document).keypress(function(){
 
 
 $(".btn").click(function clicked(){
-    var clickedColor = this.classList[1]
-    playSound(clickedColor)
-    animateClick(clickedColor)
-    userPattern.push(clickedColor)
-    checkPattern()
+    if(started)
+    {
+        var clickedColor = this.classList[1]
+        playSound(clickedColor)
+        animateClick(clickedColor)
+        userPattern.push(clickedColor)
+        checkPattern()
+    }
     })
 
 
